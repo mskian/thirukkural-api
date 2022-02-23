@@ -1,0 +1,34 @@
+{
+  "name": "thirukkural-api",
+  "version": "0.0.1",
+  "description": "Thirukkural JSON API Build using Express API Server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mskian/thirukkural-api.git"
+  },
+  "keywords": [
+    "kural",
+    "thirukkural-api",
+    "thirukkural"
+  ],
+  "author": "Santhosh Veer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mskian/thirukkural-api/issues"
+  },
+  "homepage": "https://github.com/mskian/thirukkural-api#readme",
+  "dependencies": {
+    "apicache": "^1.6.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
