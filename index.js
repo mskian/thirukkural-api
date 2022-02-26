@@ -83,7 +83,7 @@ app.use('/', function(req, res) {
             var qarr = JSON.parse(buf);
             const random_data = Math.floor(Math.random() * 1000) + 1
             var kural_data  = qarr.kural.find(el => el.Number == random_data);
-            res.status(404).json(kural_data);
+            res.status(200).json(kural_data);
     });
 });
 

@@ -8,7 +8,7 @@ Thirukkural JSON API Build using Express API Server.
 
 ```sh
 http://localhost:4001/ - # Get Random Kural
-http://localhost:4001/<0 to 1329> # http://localhost:4001/25 - Get Kural by No
+http://localhost:4001/<1 to 1330> # http://localhost:4001/25 - Get Kural by No
 ```
 
 ## API Data 🍘
