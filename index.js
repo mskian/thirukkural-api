@@ -86,3 +86,5 @@ app.use('/', function(req, res) {
             res.status(404).json(kural_data);
     });
 });
+
+module.exports = app;

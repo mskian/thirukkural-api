@@ -1,5 +1,7 @@
 # Thirukkural API
 
+![build-test](https://github.com/mskian/thirukkural-api/workflows/build-test/badge.svg)  
+
 Thirukkural JSON API Build using Express API Server.
 
 > Better self Host this API Service for 100% Uptime
