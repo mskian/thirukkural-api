@@ -66,10 +66,10 @@ app.get('/:id', cache('1 hour'), (req, res) => {
     const getID = req.params.id
     fs.readFile('kural.json', function(err, buf) {
         var qarr = JSON.parse(buf);
-        var kural_data = qarr.kural[getID];
+        var kural_data  = qarr.kural.find(el => el.Number == getID);
         if (kural_data == undefined) {
             const random_data = Math.floor(Math.random() * 1000) + 1
-            var kural_data = qarr.kural[random_data];
+            var kural_data  = qarr.kural.find(el => el.Number == random_data);
             res.json(kural_data);
         } else {
             res.json(kural_data);
@@ -79,8 +79,10 @@ app.get('/:id', cache('1 hour'), (req, res) => {
 });
 
 app.use('/', function(req, res) {
-    res.status(404).json({
-        error: 1,
-        message: 'App Error'
+    fs.readFile('kural.json', function(err, buf) {
+            var qarr = JSON.parse(buf);
+            const random_data = Math.floor(Math.random() * 1000) + 1
+            var kural_data  = qarr.kural.find(el => el.Number == random_data);
+            res.status(404).json(kural_data);
     });
 });
