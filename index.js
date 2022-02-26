@@ -78,7 +78,17 @@ app.get('/:id', cache('1 hour'), (req, res) => {
 
 });
 
-app.use('/', function(req, res) {
+app.use('/', cache('1 hour'), function(req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
+    res.header('Access-Control-Allow-Methods', 'GET');
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.setHeader('Content-Type', 'application/json');
+    app.disable('x-powered-by');
+
     fs.readFile('kural.json', function(err, buf) {
             var qarr = JSON.parse(buf);
             const random_data = Math.floor(Math.random() * 1000) + 1
