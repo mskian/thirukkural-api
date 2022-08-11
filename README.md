@@ -20,9 +20,6 @@ Tirukkuṛaḷ Data From - [@tk120404/thirukkural](https://github.com/tk120404/t
 - Express for API server
 - CORS Headers for API Restriction
 - API Cache Module for Caching the API data `app.get('/:id', cache('1 hour')`
-- Hosted at [railway.app](https://railway.app?referralCode=CyugQn)
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https%3A%2F%2Fgithub.com%2Fmskian%2Fthirukkural-api.git)
 
 ## usage 📝
 
